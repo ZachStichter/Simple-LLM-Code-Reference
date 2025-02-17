@@ -4,3 +4,4 @@
 
 /.vs
 /src/__pycache__
+/src/.env.secret
