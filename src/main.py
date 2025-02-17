@@ -3,8 +3,9 @@ class LlmManager():
         try:
             use_gemini, self.client = self.start_gemini() # prefer gemini, but if that doesn't work default to ollama mistral
         except Exception as e:
-            print(e, type(e))
-            print("Cannot use Gemini right now. If you haven't configured .env.secret, put your API key there")
+            #print(e, type(e))
+            print("Cannot use Gemini right now. If you haven't configured .env.secret, put your API key there.")
+            print(f'Gemini reported error: {e}')
             use_gemini = False
         if use_gemini:
             self.model = 'gemini'
